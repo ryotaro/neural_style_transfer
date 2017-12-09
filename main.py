@@ -1,19 +1,15 @@
 from train import train
+from arg import build_argument_parser
 
-# TODO:
-#   You can change these pathes or make this code to accept
-#   command line parameters so you can specify arbitrary parameters
-CONTENT_IMAGE_PATH = './images/daughter.jpg'
-STYLE_IMAGE_PATH = './images/mona_lisa.jpg'
-NEW_IMAGE_PATH = './images/out3.jpg'
-ITER_EPOCHS = 200
+parser = build_argument_parser()
+args = parser.parse_args()
 
 target_image = train(
-  CONTENT_IMAGE_PATH,
-  STYLE_IMAGE_PATH,
-  iter_epochs = 200,
-  content_weight = 1.0,
-  style_weight = 5000.
+  args.content_image_path,
+  args.style_image_path,
+  iter_epochs = args.iter_epochs,
+  content_weight = args.content_weight,
+  style_weight = args.style_weight
 )
 
-target_image.save(NEW_IMAGE_PATH)
+target_image.save(args.output_image_path)

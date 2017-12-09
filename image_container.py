@@ -9,7 +9,7 @@ class ImageContainer:
   def __init__(self, path, normalize_for_vgg19=False, imsize=256):
     image = Image.open(path)
     transformer = Compose([
-      Scale(imsize),
+      Scale([imsize, imsize]),  # Ensures square image
       ToTensor()
     ])
     self.variable = Variable(unsqueeze(transformer(image), 0))

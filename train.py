@@ -33,7 +33,6 @@ def train(
   while i < iter_epochs:
     def closure():
       nonlocal i
-      i += 1
       # Do the forward pass
       target_image.clamp_()
       target_image.feed(net)
@@ -50,5 +49,7 @@ def train(
       total_loss = total_content_loss + total_style_loss
       if i % 10 == 0:
         print(f'Iter: {i} / {iter_epochs}, Loss: {total_loss.data[0]}, C: {total_content_loss.data[0]}, S: {total_style_loss.data[0]}')
+      i += 1
       return total_loss
     optimizer.step(closure)
+  return target_image
