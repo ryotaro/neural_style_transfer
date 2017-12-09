@@ -3,7 +3,7 @@
 This script generates a new image from given two images using [Neural Style Transfer algorithm](https://arxiv.org/abs/1508.06576).
 You can generate an artistic image by specifying base content image and target style image which you want to apply the style to the content image.
 
-![](https://user-images.githubusercontent.com/644107/33796688-fff0dc5c-dd3c-11e7-8b3b-abb393c84efa.png)
+![]()
 
 ## Requirement
 Python 3.6
@@ -67,3 +67,26 @@ Iter: 250 / 250, Loss: 1.7941423654556274, C: 1.0674238204956055, S: 0.726718544
 
 ## Warning
 No CUDA support yet.. (ごめん)
+
+## License
+MIT License
+
+Copyright (c) 2017 Ryotaro IKEDA
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
