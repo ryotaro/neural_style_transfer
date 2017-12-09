@@ -1,6 +1,6 @@
 # Vanilla Neural Style Transfer Implementation Written in PyTorch
 ## Overview
-This script generates a new image from given two images using Neural Style Transfer algorithm [1](https://arxiv.org/abs/1508.06576).
+This script generates a new image from given two images using [Neural Style Transfer algorithm](https://arxiv.org/abs/1508.06576).
 You can generate an artistic image by specifying base content image and target style image which you want to apply the style to the content image.
 
 ## Requirement
@@ -18,13 +18,16 @@ Execute `main.py` with following command-line parameters.
 
 
 ## Parameters
-`-h, --help`: Show usage
-`-c CONTENT_IMAGE_PATH`: (REQUIRED) path for content image (jpeg)
-`-s STYLE_IMAGE_PATH`: (REQUIRED) path for style image (jpeg)
-`-o OUTPUT_IMAGE_PATH`: (REQUIRED) path for output image (jpeg)
-`-i ITER_EPOCHS`: (OPTIONAL) how many epochs to iterate in train time. DEFAULT=200
-`-a CONTENT_WEIGHT`: (OPTIONAL) how much it does penalize for content image. DEFAULT=1
-`-b STYLE_WEIGHT`: (OPTIONAL) how muc hit does penalize for style image. DEFAULT=3000
+
+| Option | Description |
+| ------ | ----------- |
+| `-h, --help` | Show usage |
+| `-c CONTENT_IMAGE_PATH` |  (REQUIRED) path for content image (jpeg) |
+| `-s STYLE_IMAGE_PATH` | (REQUIRED) path for style image (jpeg) |
+| `-o OUTPUT_IMAGE_PATH` |  (REQUIRED) path for output image (jpeg) |
+| `-i ITER_EPOCHS` |  (OPTIONAL) how many epochs to iterate in train time. DEFAULT=200 |
+| `-a CONTENT_WEIGHT` | (OPTIONAL) how much it does penalize for content image. DEFAULT=1 |
+| `-b STYLE_WEIGHT` | (OPTIONAL) how muc hit does penalize for style image. DEFAULT=3000|
 
 ## Example
 ```
