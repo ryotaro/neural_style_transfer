@@ -1,5 +1,6 @@
 from typing import AnyStr
-from image_container import ImageContainer
+from image.container import ImageContainer
+from image.parameter import ImageParameter
 from optimizer import make_optimizer
 from models import make_network
 
@@ -18,7 +19,7 @@ def train(
 
   # The original paper shows that you can use random noise as an input however,
   # to make learning easier, here, we use exactly the same image as content.
-  target_image = ImageContainer(content_image_path)
+  target_image = ImageParameter(content_image_path)
 
   net, content_losses, style_losses = make_network(
     content_image,

@@ -3,7 +3,7 @@ from torch.nn import Module, Sequential, MSELoss
 from torch import Tensor, mm
 from torch.autograd import Variable
 
-from image_container import ImageContainer
+from image.container import ImageContainer
 
 class ContentLoss(Module):
   def __init__(self, target, weight):
@@ -35,7 +35,7 @@ class StyleLoss(Module):
     self.weight = weight
   
   def forward(self, x):
-    self.output =  x.clone()
+    self.output =  x.clone()  # TODO: INVESTIGATE
     G = gram_matrix(x)
     G = G.mul(self.weight)
     self.loss = self.criterion(G, self.target)

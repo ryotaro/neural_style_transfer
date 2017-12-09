@@ -1,6 +1,5 @@
 from torch.optim import Optimizer, LBFGS
-from torch.optim.lr_scheduler import ReduceLROnPlateau
-from image_container import ImageContainer
+from image.container import ImageContainer
 
 def make_optimizer(
   target_img: ImageContainer
