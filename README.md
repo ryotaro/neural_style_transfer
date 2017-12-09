@@ -3,6 +3,8 @@
 This script generates a new image from given two images using [Neural Style Transfer algorithm](https://arxiv.org/abs/1508.06576).
 You can generate an artistic image by specifying base content image and target style image which you want to apply the style to the content image.
 
+![](https://user-images.githubusercontent.com/644107/33796688-fff0dc5c-dd3c-11e7-8b3b-abb393c84efa.png)
+
 ## Requirement
 Python 3.6
 
