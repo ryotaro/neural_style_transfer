@@ -61,14 +61,14 @@ def make_network(
   for i, module in enumerate(vgg19_pretrained):
     net.add_module(f'layer_{i}', module)
     if i in style_layers_indexes:
-      target = net(style_img.variable).clone()
+      target = net(style_img.variable).clone()  # TODO: INVESTIGATE
       target_gram = gram_matrix(target)
       style_loss = StyleLoss(target_gram, style_weight)
       net.add_module(f'style_loss_{i}', style_loss)
       style_losses.append(style_loss)
 
     if i in content_layers_indexes:
-      target = net(content_img.variable).clone()
+      target = net(content_img.variable).clone()  # TODO: INVESTIGATE
       content_loss = ContentLoss(target, content_weight)
       net.add_module(f'content_loss_{i}', content_loss)
       content_losses.append(content_loss)

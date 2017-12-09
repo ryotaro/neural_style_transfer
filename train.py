@@ -9,8 +9,8 @@ def train(
   content_image_path: AnyStr,
   style_image_path: AnyStr,
   iter_epochs: int = 200,
-  content_weight: float = 1.,
-  style_weight: float = 3000.,
+  content_weight: int = 1,
+  style_weight: int = 3000,
   ) -> ImageContainer:
 
   content_image = ImageContainer(content_image_path)
@@ -34,7 +34,6 @@ def train(
     def closure():
       nonlocal i
       # Do the forward pass
-      target_image.clamp_()
       target_image.feed(net)
 
       # Do the BP
@@ -52,4 +51,5 @@ def train(
       i += 1
       return total_loss
     optimizer.step(closure)
+    target_image.clamp_()
   return target_image

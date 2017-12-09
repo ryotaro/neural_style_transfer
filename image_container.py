@@ -4,7 +4,8 @@ from torch.nn import Parameter
 from torch.autograd import Variable
 from torchvision.transforms import Compose, Scale, ToTensor, ToPILImage, Normalize
 
-
+# TODO:
+# Separate functionality: Fixed target images & an image to be fed
 class ImageContainer:
   def __init__(self, path, normalize_for_vgg19=False, imsize=256):
     image = Image.open(path)
